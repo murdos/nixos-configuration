@@ -7,21 +7,18 @@
 				i3status
 				i3lock
 				gnome3.defaultIconTheme
+				arc-theme
+				arc-icon-theme
 		];
 	};
+
 	services = {
 		xserver = {
 			enable = true;
-			synaptics = {
-				enable = true;
-				twoFingerScroll = true;
-				tapButtons = true;
-			};
-			windowManager = {
-				i3 = {
-					enable = true;
-				};
-			};
+			layout = "fr";
+			libinput.enable = true;
+			desktopManager.gnome3.enable = true;
+			windowManager.i3.enable = true;
 			displayManager = {
 				sessionCommands = ''
 					${pkgs.networkmanagerapplet}/bin/nm-applet &
@@ -29,11 +26,18 @@
 					gpg-connect-agent /bye
 					export SSH_AUTH_SOCK="/run/user/$UID/gnupg/S.gpg-agent.ssh"
 				'';
+	                        lightdm.enable = false;
+	                        gdm.enable = true;
 				slim = {
-					enable = true;
-					defaultUser = "xadet";
+					enable = false;
+					defaultUser = "amino";
 				};
 			};
 		};
 	};
+  
+ 	# Enable sound.
+	sound.enable = true;
+  	sound.mediaKeys.enable = true;
+  	hardware.pulseaudio.enable = true;
 }

@@ -8,22 +8,22 @@
 	imports =
 		[ # Include the results of the hardware scan.
 			./hardware-configuration.nix
-			./keyboard.nix
 			./acpi.nix
 			./network.nix
-			./gui.nix
+			./desktop.nix
 			./users.nix
 			./system-packages.nix
 			./virtualisation.nix
-            ./yubikey.nix
 		];
 
+  	# Internationalisation properties.
 	i18n = {
 		consoleFont = "Lat2-Terminus16";
 		consoleKeyMap = "fr";
 		defaultLocale = "en_US.UTF-8";
 	};
 
+  	# Time zone.
 	time.timeZone = "Europe/Paris";
 
 	system = {
@@ -32,6 +32,12 @@
 			enable = true;
 			dates = "13:00";
 		};
+	};
+
+	# Nix Store cleaning
+	nix.gc = {
+		automatic = true;
+		dates = "13:30";
 	};
 
 	nixpkgs = {

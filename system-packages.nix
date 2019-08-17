@@ -2,7 +2,7 @@
 
 {
   imports = [
-    "${builtins.fetchTarball https://github.com/rycee/home-manager/archive/master.tar.gz}/nixos"
+    "${builtins.fetchTarball https://github.com/rycee/home-manager/archive/release-19.03.tar.gz}/nixos"
   ];
 	environment = {
 		variables = {
@@ -23,7 +23,6 @@
 				aspellDicts.en
 				aspellDicts.fr
 				direnv
-				terminator
 				zip
 				unzip
 				udiskie
@@ -33,11 +32,7 @@
 				autorandr
 				powerline-fonts
 				xorg.xbacklight
-				yubico-piv-tool
-				yubikey-personalization
-				yubikey-personalization-gui
-				yubioath-desktop
-                home-manager
+                                home-manager
 		];
 	};
 	programs = {
