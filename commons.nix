@@ -5,55 +5,41 @@
 { config, pkgs, ... }:
 
 {
-	imports =
-		[ # Include the results of the hardware scan.
-			./hardware-configuration.nix
-			./acpi.nix
-			./network.nix
-			./desktop.nix
-			./users.nix
-			./system-packages.nix
-			./virtualisation.nix
-		];
+  imports = [
+    ./hardware-configuration.nix
+    ./acpi.nix
+    ./network.nix
+    ./desktop.nix
+    ./users.nix
+    ./system-packages.nix
+    ./virtualisation.nix
+  ];
 
-  	# Internationalisation properties.
-	i18n = {
-		consoleFont = "Lat2-Terminus16";
-		consoleKeyMap = "fr";
-		defaultLocale = "en_US.UTF-8";
-	};
+  # Internationalisation properties.
+  i18n = {
+    consoleFont = "Lat2-Terminus16";
+    consoleKeyMap = "fr";
+    defaultLocale = "en_US.UTF-8";
+  };
 
-  	# Time zone.
-	time.timeZone = "Europe/Paris";
+  # Time zone.
+  time.timeZone = "Europe/Paris";
 
-	system = {
-		stateVersion = "19.03";
-		autoUpgrade = {
-			enable = true;
-			dates = "13:00";
-		};
-	};
-
-	# Nix Store cleaning
-	nix.gc = {
-		automatic = true;
-		dates = "13:30";
-	};
-
-	nixpkgs = {
-		config = {
-			allowUnfree = true;
-		};
-	};
-
-	hardware = {
-		pulseaudio = {
-			enable = true;
-			support32Bit = true;
-			package = pkgs.pulseaudioFull;
-		};
-	};
-    boot.kernel.sysctl = {
-      "kernel.sysrq" = 0;
+  system = {
+    stateVersion = "19.03";
+    autoUpgrade = {
+      enable = true;
+      dates = "13:00";
     };
+  };
+
+  # Nix Store cleaning
+  nix.gc = {
+    automatic = true;
+    dates = "13:30";
+  };
+
+  nixpkgs.config.allowUnfree = true;
+
+  boot.kernel.sysctl."kernel.sysrq" = 0;
 }

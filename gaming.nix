@@ -1,16 +1,10 @@
 { config, pkgs, ... }:
 
 {
-	environment = {
-		systemPackages = with pkgs; [
-			steam
-			discord
-		];
-	};
+  environment.systemPackages = with pkgs; [
+    steam
+    discord
+  ];
 
-	hardware = {
-		opengl = {
-			driSupport32Bit = true;
-		};
-	};
+  hardware.opengl.driSupport32Bit = true;
 }
