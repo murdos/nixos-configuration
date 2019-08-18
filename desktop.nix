@@ -32,6 +32,8 @@
     };
   };
 
+  services.gnome3.chrome-gnome-shell.enable = true;
+
   # Sound
   sound = {
     enable = true;
