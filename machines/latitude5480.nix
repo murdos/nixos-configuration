@@ -18,6 +18,7 @@
       useOSProber = true;
       device = "nodev";
       efiSupport = true;
+      default = 2;
     };
   };
 
