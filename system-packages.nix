@@ -1,9 +1,6 @@
 { config, pkgs, ... }:
 
 {
-  imports = [
-    "${builtins.fetchTarball https://github.com/rycee/home-manager/archive/release-19.03.tar.gz}/nixos"
-  ];
   environment = {
     variables = {
       EDITOR = pkgs.lib.mkOverride 0 "vim";
@@ -32,7 +29,6 @@
       autorandr
       powerline-fonts
       xorg.xbacklight
-      home-manager
     ];
   };
   programs = {
