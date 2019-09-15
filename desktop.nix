@@ -33,6 +33,8 @@
   # Gnome3 Shell extensions install from Firefox
   services.gnome3.chrome-gnome-shell.enable = true;
   nixpkgs.config.firefox.enableGnomeExtensions = true;
+  # Plotinus
+  programs.plotinus.enable = true;
 
   # Sound
   sound = {
