@@ -6,8 +6,6 @@
     i3status
     i3lock
     gnome3.defaultIconTheme
-    arc-theme
-    arc-icon-theme
   ];
 
   services.xserver = {
