@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 {
   imports = [
@@ -38,6 +38,15 @@
     automatic = true;
     dates = "13:30";
   };
+
+  # Workaround to run binary embedded in Maven dependencies
+  # FIXME: replace with `environment.ld-linux = true;` in NixOS 20.03
+  # See https://github.com/NixOS/nixpkgs/pull/69057
+  system.activationScripts.ldso = lib.stringAfter [ "usrbinenv" ] ''
+    mkdir -m 0755 -p /lib64
+    ln -sfn ${pkgs.glibc.out}/lib64/ld-linux-x86-64.so.2 /lib64/ld-linux-x86-64.so.2.tmp
+    mv -f /lib64/ld-linux-x86-64.so.2.tmp /lib64/ld-linux-x86-64.so.2 # atomically replace
+  '';
 
   nixpkgs.config.allowUnfree = true;
 
