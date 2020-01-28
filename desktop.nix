@@ -15,12 +15,6 @@
     desktopManager.gnome3.enable = true;
     windowManager.i3.enable = true;
     displayManager = {
-      sessionCommands = ''
-        ${pkgs.networkmanagerapplet}/bin/nm-applet &
-        ${pkgs.udiskie}/bin/udiskie -a -t -n -F &
-        gpg-connect-agent /bye
-        export SSH_AUTH_SOCK="/run/user/$UID/gnupg/S.gpg-agent.ssh"
-      '';
       lightdm.enable = false;
       gdm.enable = true;
       slim = {
