@@ -34,6 +34,14 @@
   # programs.gnupg.agent = { enable = true; enableSSHSupport = true; };
 
   # Enable CUPS to print documents.
-  # services.printing.enable = true;
+  services.printing = {
+    enable = true;
+    browsing = true;
+    drivers = [ pkgs.epson-escpr ];
+  };
+  services.avahi = {
+    enable = true;
+    nssmdns = true;
+  };
 
 }
