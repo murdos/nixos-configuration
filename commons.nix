@@ -9,6 +9,7 @@
     ./hardware-configuration.nix
     ./acpi.nix
     ./network.nix
+    ./network-shares.nix
     ./desktop.nix
     ./users.nix
     ./system-packages.nix
