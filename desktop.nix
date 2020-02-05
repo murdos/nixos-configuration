@@ -2,10 +2,6 @@
 
 {
   environment.systemPackages = with pkgs; [
-    dmenu
-    i3status
-    i3lock
-    gnome3.defaultIconTheme
   ];
 
   services.xserver = {
@@ -16,7 +12,17 @@
       gnome3.enable = true;
       xterm.enable = false;
     };
-    windowManager.i3.enable = true;
+    windowManager.i3 = {
+      enable = true;
+      extraPackages = with pkgs; [
+        dmenu
+        i3status
+        i3lock
+        i3blocks
+        networkmanagerapplet
+        gnome3.defaultIconTheme
+      ];
+    };
     displayManager = {
       lightdm.enable = false;
       gdm.enable = true;
