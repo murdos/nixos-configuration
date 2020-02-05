@@ -12,7 +12,10 @@
     enable = true;
     layout = "fr";
     libinput.enable = true;
-    desktopManager.gnome3.enable = true;
+    desktopManager = {
+      gnome3.enable = true;
+      xterm.enable = false;
+    };
     windowManager.i3.enable = true;
     displayManager = {
       lightdm.enable = false;
