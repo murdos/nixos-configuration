@@ -10,6 +10,7 @@
       git
       vim
       usbutils
+      pciutils
       tree
       gnupg
       file

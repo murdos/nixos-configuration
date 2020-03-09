@@ -28,6 +28,14 @@
   hardware.bluetooth.enable = true;
   services.blueman.enable = true;
 
+  hardware.opengl.enable = true;
+  services.xserver.videoDrivers = [ "nvidia" ];
+  hardware.nvidia.optimus_prime = {
+    enable = true;
+    nvidiaBusId = "PCI:2:0:0";
+    intelBusId = "PCI:0:2:0";
+  };
+
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;

@@ -26,6 +26,7 @@
     displayManager = {
       lightdm.enable = false;
       gdm.enable = true;
+      gdm.wayland = false;
       slim = {
         enable = false;
         defaultUser = "amino";
