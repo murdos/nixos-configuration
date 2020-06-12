@@ -26,6 +26,8 @@
   # Time zone.
   time.timeZone = "Europe/Paris";
 
+  boot.plymouth.enable = true;
+
   system = {
     stateVersion = "19.03";
     autoUpgrade = {
