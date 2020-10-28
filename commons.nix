@@ -17,11 +17,11 @@
   ];
 
   # Internationalisation properties.
-  i18n = {
-    consoleFont = "Lat2-Terminus16";
-    consoleKeyMap = "fr";
-    defaultLocale = "en_US.UTF-8";
+  console = {
+    font = "Lat2-Terminus16";
+    keyMap = "fr";
   };
+  i18n.defaultLocale = "en_US.UTF-8";
 
   # Time zone.
   time.timeZone = "Europe/Paris";
@@ -29,7 +29,7 @@
   boot.plymouth.enable = true;
 
   system = {
-    stateVersion = "19.03";
+    stateVersion = "20.03";
     autoUpgrade = {
       enable = true;
       dates = "13:00";

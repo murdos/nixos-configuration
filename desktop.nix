@@ -26,10 +26,6 @@
     displayManager = {
       lightdm.enable = false;
       gdm.enable = true;
-      slim = {
-        enable = false;
-        defaultUser = "amino";
-      };
     };
   };
 
@@ -37,7 +33,7 @@
   services.gnome3.chrome-gnome-shell.enable = true;
   nixpkgs.config.firefox.enableGnomeExtensions = true;
   # Plotinus
-  programs.plotinus.enable = true;
+  #programs.plotinus.enable = true;
 
   # Sound
   sound = {
