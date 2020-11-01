@@ -29,7 +29,7 @@
   boot.plymouth.enable = true;
 
   system = {
-    stateVersion = "20.03";
+    stateVersion = "20.09";
     autoUpgrade = {
       enable = true;
       dates = "13:00";
@@ -42,8 +42,7 @@
     dates = "13:30";
   };
 
-  # Workaround to run binary embedded in Maven dependencies
-  # FIXME: replace with `environment.ld-linux = true;` in NixOS 20.03
+  # Workaround to run some binaries embedded in Maven dependencies
   # See https://github.com/NixOS/nixpkgs/pull/69057
   system.activationScripts.ldso = lib.stringAfter [ "usrbinenv" ] ''
     mkdir -m 0755 -p /lib64

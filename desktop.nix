@@ -2,16 +2,28 @@
 
 {
   environment.systemPackages = with pkgs; [
+    gnome3.gnome-boxes
+    gnome3.gnome-books
+    gnome3.dconf-editor
+    gnome3.gnome-documents
+    gnome3.gnome-nettool
+    gnome3.gnome-power-manager
+    gnome3.gnome-tweaks
+    gnome3.gnome-usage
+    gnome3.vinagre
+    gimp
+    shotwell
+    blueman
+    vlc
+    calibre
+    libreoffice
   ];
 
   services.xserver = {
     enable = true;
     layout = "fr";
     libinput.enable = true;
-    desktopManager = {
-      gnome3.enable = true;
-      xterm.enable = false;
-    };
+    desktopManager.gnome3.enable = true;
     windowManager.i3 = {
       enable = true;
       extraPackages = with pkgs; [
