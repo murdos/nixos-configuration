@@ -17,6 +17,9 @@
     vlc
     calibre
     libreoffice
+    apulse
+    pavucontrol
+    autorandr
   ];
 
   services.xserver = {

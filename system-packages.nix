@@ -23,12 +23,7 @@
       zip
       unzip
       udiskie
-      apulse
-      pavucontrol
-      pasystray
-      autorandr
       powerline-fonts
-      xorg.xbacklight
     ];
   };
   programs = {
