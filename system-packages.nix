@@ -22,7 +22,6 @@
       direnv
       zip
       unzip
-      udiskie
       powerline-fonts
     ];
   };
