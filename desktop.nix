@@ -19,7 +19,8 @@
     libreoffice
     apulse
     pavucontrol
-    autorandr
+    logitech-udev-rules
+    solaar
   ];
 
   services.xserver = {
