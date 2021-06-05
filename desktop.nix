@@ -2,15 +2,14 @@
 
 {
   environment.systemPackages = with pkgs; [
-    gnome3.gnome-boxes
-    gnome3.gnome-books
-    gnome3.dconf-editor
-    gnome3.gnome-documents
-    gnome3.gnome-nettool
-    gnome3.gnome-power-manager
-    gnome3.gnome-tweaks
-    gnome3.gnome-usage
-    gnome3.vinagre
+    gnome.gnome-boxes
+    gnome.gnome-books
+    gnome.dconf-editor
+    gnome.gnome-nettool
+    gnome.gnome-power-manager
+    gnome.gnome-tweaks
+    gnome.gnome-usage
+    gnome.vinagre
     gimp
     shotwell
     blueman
@@ -27,7 +26,7 @@
     enable = true;
     layout = "fr";
     libinput.enable = true;
-    desktopManager.gnome3.enable = true;
+    desktopManager.gnome.enable = true;
     windowManager.i3 = {
       enable = true;
       extraPackages = with pkgs; [
@@ -45,8 +44,8 @@
     };
   };
 
-  # Gnome3 Shell extensions install from Firefox
-  services.gnome3.chrome-gnome-shell.enable = true;
+  # Gnome Shell extensions install from Firefox
+  services.gnome.chrome-gnome-shell.enable = true;
   nixpkgs.config.firefox.enableGnomeExtensions = true;
   # Plotinus
   #programs.plotinus.enable = true;
