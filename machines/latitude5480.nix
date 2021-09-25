@@ -37,7 +37,7 @@
   services.printing = {
     enable = true;
     browsing = true;
-    drivers = [ pkgs.epson-escpr ];
+    drivers = [ pkgs.cnijfilter2 ];
   };
   services.avahi = {
     enable = true;
