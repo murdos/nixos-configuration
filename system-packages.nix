@@ -9,6 +9,7 @@
       wget
       git
       vim
+      vimPlugins.vim-nix
       usbutils
       tree
       gnupg
