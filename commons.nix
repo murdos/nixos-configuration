@@ -37,9 +37,12 @@
   };
 
   # Nix Store cleaning
-  nix.gc = {
-    automatic = true;
-    dates = "13:30";
+  nix = {
+    autoOptimiseStore = true;
+    gc = {
+      automatic = true;
+      dates = "13:30";
+    };
   };
 
   # Workaround to run some binaries embedded in Maven dependencies
