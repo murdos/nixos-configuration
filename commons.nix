@@ -21,7 +21,10 @@
     font = "Lat2-Terminus16";
     keyMap = "fr";
   };
-  i18n.defaultLocale = "en_US.UTF-8";
+  i18n = {
+    defaultLocale = "en_US.UTF-8";
+    supportedLocales = [ "en_US.UTF-8/UTF-8" "fr_FR.UTF-8/UTF-8" "fr_FR@euro/ISO-8859-15" ];
+  };
 
   # Time zone.
   time.timeZone = "Europe/Paris";
@@ -39,10 +42,6 @@
   # Nix Store cleaning
   nix = {
     autoOptimiseStore = true;
-    gc = {
-      automatic = true;
-      dates = "13:30";
-    };
   };
 
   nixpkgs.config.allowUnfree = true;
