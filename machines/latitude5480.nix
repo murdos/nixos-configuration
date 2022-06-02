@@ -6,18 +6,22 @@
 
 {
   imports = [
+    <nixos-hardware/common/cpu/intel>
+    <nixos-hardware/common/pc/laptop>
+    <nixos-hardware/common/pc/laptop/ssd>
+    <nixos-hardware/common/gpu/nvidia-disable.nix>
     ../commons.nix
   ];
 
   # Boot loader
   boot.loader = {
-    systemd-boot.enable = true;
     efi.canTouchEfiVariables = true;
     grub = {
       enable = true;
       useOSProber = true;
       device = "nodev";
       efiSupport = true;
+      configurationLimit = 15;
     };
   };
 

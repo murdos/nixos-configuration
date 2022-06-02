@@ -32,7 +32,7 @@
   boot.plymouth.enable = true;
 
   system = {
-    stateVersion = "21.05";
+    stateVersion = "22.05";
     autoUpgrade = {
       enable = true;
       dates = "13:00";
