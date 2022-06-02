@@ -42,6 +42,11 @@
   # Nix Store cleaning
   nix = {
     autoOptimiseStore = true;
+    gc = {
+      automatic = true;
+      options = "--delete-older-than 40d";
+      dates = "weekly";
+    };
   };
 
   systemd.tmpfiles.rules = [
