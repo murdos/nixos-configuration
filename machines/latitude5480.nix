@@ -28,8 +28,17 @@
   # networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
-  hardware.bluetooth.enable = true;
-  services.blueman.enable = true;
+  hardware = {
+    bluetooth.enable = true;
+    enableRedistributableFirmware = true;
+    enableAllFirmware = true;
+    cpu.intel.updateMicrocode = true;
+  };
+  services = {
+    blueman.enable = true;
+    tlp.enable = true;
+    power-profiles-daemon.enable = false;
+  };
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
