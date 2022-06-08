@@ -12,6 +12,8 @@
       vim
       vimPlugins.vim-nix
       usbutils
+      pciutils
+      htop
       tree
       gnupg
       file
