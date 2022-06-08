@@ -11,6 +11,11 @@
     <nixos-hardware/common/pc/laptop/ssd>
     <nixos-hardware/common/gpu/nvidia-disable.nix>
     ../commons.nix
+    ../hardware-configuration.nix
+    ../desktop-gnome.nix
+    ../network-shares.nix
+    ../virtualisation.nix
+
   ];
 
   # Boot loader
