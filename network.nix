@@ -19,11 +19,4 @@
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
 
-  services.openssh = {
-    enable = true;
-    gatewayPorts = "yes";
-    extraConfig = ''
-StreamLocalBindUnlink yes
-      '';
-  };
 }
