@@ -2,9 +2,13 @@
 
 {
   networking.networkmanager.enable = true;
+  networking.dhcpcd.enable = false;
+  services.resolved.enable = true;
 
   environment.systemPackages = with pkgs; [
     networkmanagerapplet
+    openvpn
+    update-systemd-resolved
   ];
 
   # Configure network proxy if necessary
