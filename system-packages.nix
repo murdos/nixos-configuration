@@ -33,5 +33,6 @@
   programs = {
     bash.enableCompletion = true;
     ssh.startAgent = false;
+    nix-ld.enable = true;
   };
 }
