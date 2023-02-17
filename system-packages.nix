@@ -7,6 +7,8 @@
     };
     systemPackages = with pkgs; [
       linux-firmware
+      fish
+      firefox-wayland
       wget
       git
       vim

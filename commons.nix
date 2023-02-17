@@ -28,7 +28,7 @@
   boot.plymouth.enable = true;
 
   system = {
-    stateVersion = "22.05";
+    stateVersion = "22.11";
     autoUpgrade = {
       enable = true;
       dates = "13:00";
@@ -37,7 +37,7 @@
 
   # Nix Store cleaning
   nix = {
-    autoOptimiseStore = true;
+    settings.auto-optimise-store = true;
     gc = {
       automatic = true;
       options = "--delete-older-than 40d";

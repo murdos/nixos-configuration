@@ -4,7 +4,6 @@
   imports = [ ./desktop-base.nix ];
   environment.systemPackages = with pkgs; [
     gnome.gnome-boxes
-    gnome.gnome-books
     gimp
     shotwell
     calibre
@@ -17,7 +16,7 @@
   };
 
   # Gnome Shell extensions install from Firefox
-  services.gnome.chrome-gnome-shell.enable = true;
+  services.gnome.gnome-browser-connector.enable = true;
   nixpkgs.config.firefox.enableGnomeExtensions = true;
   # Plotinus
   programs.plotinus.enable = true;
