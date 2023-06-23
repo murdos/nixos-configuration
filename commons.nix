@@ -35,6 +35,8 @@
     };
   };
 
+  services.fwupd.enable = true;
+
   # Nix Store cleaning
   nix = {
     settings.auto-optimise-store = true;
