@@ -11,6 +11,7 @@
       firefox-wayland
       wget
       git
+      lazygit
       vim
       vimPlugins.vim-nix
       usbutils
