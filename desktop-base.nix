@@ -2,7 +2,6 @@
 
 {
   environment.systemPackages = with pkgs; [
-    vlc
     pavucontrol
     logitech-udev-rules
     solaar
