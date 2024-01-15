@@ -40,7 +40,8 @@
 
   # Gnome Shell extensions install from Firefox
   services.gnome.gnome-browser-connector.enable = true;
-  nixpkgs.config.firefox.enableGnomeExtensions = true;
+
   # Plotinus
   programs.plotinus.enable = true;
 }
+
