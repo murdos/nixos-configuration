@@ -28,7 +28,7 @@
   system = {
     stateVersion = "23.05";
     autoUpgrade = {
-      enable = true;
+      enable = false;
       dates = "13:00";
     };
   };
