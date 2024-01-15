@@ -23,6 +23,8 @@
 
   boot.plymouth.enable = true;
 
+  services.envfs.enable = true;
+
   system = {
     stateVersion = "23.05";
     autoUpgrade = {
