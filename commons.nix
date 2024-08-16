@@ -23,7 +23,10 @@
 
   boot.plymouth.enable = true;
 
-  services.envfs.enable = true;
+  services = {
+    envfs.enable = true;
+    journald.extraConfig = "SystemMaxUse=200M";
+  };
 
   system = {
     stateVersion = "23.11";
