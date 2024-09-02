@@ -33,7 +33,7 @@
     ];
   };
   programs = {
-    bash.enableCompletion = true;
+    bash.completion.enable = true;
     ssh.startAgent = false;
     nix-ld.enable = true;
   };

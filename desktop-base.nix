@@ -10,8 +10,8 @@
   services.xserver = {
     enable = true;
     xkb.layout = "fr";
-    libinput.enable = true;
   };
+  services.libinput.enable = true;
 
   security.rtkit.enable = true;
   services.pipewire = {
