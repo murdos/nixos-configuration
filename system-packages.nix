@@ -19,6 +19,7 @@
       tree
       gnupg
       file
+      nvd
       gnumake
       automake
       gcc
