@@ -30,7 +30,6 @@
       zip
       unzip
       udiskie
-      powerline-fonts
     ];
   };
   programs = {

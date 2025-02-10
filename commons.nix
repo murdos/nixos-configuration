@@ -3,6 +3,7 @@
 {
   imports = [
     ./acpi.nix
+    ./fonts.nix
     ./network.nix
     ./users.nix
     ./system-packages.nix
