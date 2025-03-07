@@ -30,7 +30,7 @@
   };
 
   system = {
-    stateVersion = "23.11";
+    stateVersion = "24.11";
     autoUpgrade = {
       enable = false;
       dates = "13:00";
@@ -45,7 +45,7 @@
     gc = {
       automatic = true;
       options = "--delete-older-than 40d";
-      dates = "weekly";
+      dates = "daily";
     };
   };
 
