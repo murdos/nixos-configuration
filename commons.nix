@@ -32,8 +32,8 @@
   system = {
     stateVersion = "24.11";
     autoUpgrade = {
-      enable = false;
-      dates = "13:00";
+      enable = true;
+      dates = "daily";
     };
   };
 
@@ -44,7 +44,7 @@
     settings.auto-optimise-store = true;
     gc = {
       automatic = true;
-      options = "--delete-older-than 40d";
+      options = "--delete-older-than 20d";
       dates = "daily";
     };
   };
