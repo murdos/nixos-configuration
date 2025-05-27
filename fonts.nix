@@ -11,7 +11,15 @@
   };
   fonts = {
     enableDefaultPackages = true;
-    packages = [ ] ++ builtins.filter lib.attrsets.isDerivation (builtins.attrValues pkgs.nerd-fonts);
+    packages = with pkgs; [ 
+      fira
+      nerd-fonts.hack
+      nerd-fonts.jetbrains-mono
+      nerd-fonts.iosevka
+      nerd-fonts.daddy-time-mono
+      nerd-fonts.symbols-only
+      noto-fonts
+    ];
     fontconfig = {
       defaultFonts = {
         monospace = [ "FiraCode Nerd Font" ];
