@@ -1,7 +1,10 @@
 { config, pkgs, ... }:
 
 {
-  networking.networkmanager.enable = true;
+  networking.networkmanager = {
+    enable = true;
+    plugins = [ pkgs.networkmanager-openvpn ];
+  };
   networking.dhcpcd.enable = false;
   services.resolved.enable = true;
 
