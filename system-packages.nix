@@ -36,5 +36,6 @@
     bash.completion.enable = true;
     ssh.startAgent = false;
     nix-ld.enable = true;
+    nh.enable = true;
   };
 }
