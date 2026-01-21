@@ -21,8 +21,9 @@
 
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
-  boot.initrd.luks.devices."root".device = "/dev/disk/by-partlabel/root";
+  system.stateVersion = "25.05";
 
+  boot.initrd.luks.devices."root".device = "/dev/disk/by-partlabel/root";
   fileSystems."/" =
     { device = "/dev/disk/by-uuid/deaeaa70-24ec-4363-9ede-2735becef192";
       fsType = "ext4";

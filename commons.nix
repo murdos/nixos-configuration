@@ -30,7 +30,6 @@
   };
 
   system = {
-    stateVersion = "25.05";
     autoUpgrade = {
       enable = true;
       dates = "daily";
