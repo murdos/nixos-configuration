@@ -7,6 +7,7 @@
     };
     systemPackages = with pkgs; [
       linux-firmware
+      btop
       fish
       wget
       git
@@ -30,6 +31,7 @@
       zip
       unzip
       udiskie
+      zellij
     ];
   };
   programs = {
