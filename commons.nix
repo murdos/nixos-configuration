@@ -40,7 +40,10 @@
 
   # Nix Store cleaning
   nix = {
-    settings.auto-optimise-store = true;
+    settings = {
+      auto-optimise-store = true;
+      extra-experimental-features = [ "nix-command" "flakes" ];
+    };
     gc = {
       automatic = true;
       options = "--delete-older-than 20d";
