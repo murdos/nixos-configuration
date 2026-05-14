@@ -24,6 +24,8 @@
       gnumake
       automake
       gcc
+      age
+      sops
       aspell
       aspellDicts.en
       aspellDicts.fr
