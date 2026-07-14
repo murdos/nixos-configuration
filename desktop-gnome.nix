@@ -1,4 +1,9 @@
-{ config, pkgs, lib, ... }:
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}:
 
 {
   imports = [ ./desktop-base.nix ];
@@ -21,4 +26,3 @@
   # Plotinus
   programs.plotinus.enable = true;
 }
-

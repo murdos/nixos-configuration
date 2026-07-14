@@ -2,7 +2,9 @@
 
 {
   imports = [
-    "${builtins.fetchGit { url = "https://github.com/nixos/nixos-hardware.git"; }}/framework/13-inch/7040-amd/"
+    "${
+      builtins.fetchGit { url = "https://github.com/nixos/nixos-hardware.git"; }
+    }/framework/13-inch/7040-amd/"
     ../commons.nix
     ../hardware-configuration.nix
     ../desktop-gnome.nix
@@ -24,29 +26,29 @@
   system.stateVersion = "25.05";
 
   boot.initrd.luks.devices."root".device = "/dev/disk/by-partlabel/root";
-  fileSystems."/" =
-    { device = "/dev/disk/by-uuid/deaeaa70-24ec-4363-9ede-2735becef192";
-      fsType = "ext4";
-    };
+  fileSystems."/" = {
+    device = "/dev/disk/by-uuid/deaeaa70-24ec-4363-9ede-2735becef192";
+    fsType = "ext4";
+  };
 
-  fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/64EC-E768";
-      fsType = "vfat";
-    };
+  fileSystems."/boot" = {
+    device = "/dev/disk/by-uuid/64EC-E768";
+    fsType = "vfat";
+  };
 
-  fileSystems."/home" =
-    { device = "/dev/disk/by-uuid/bfc45502-112c-4613-8f41-0ab52d74c413";
-      fsType = "ext4";
-    };
+  fileSystems."/home" = {
+    device = "/dev/disk/by-uuid/bfc45502-112c-4613-8f41-0ab52d74c413";
+    fsType = "ext4";
+  };
 
-  fileSystems."/nix/store" =
-    { device = "/dev/disk/by-uuid/408ec677-58a1-49be-8df1-62879216046a";
-      fsType = "ext4";
-    };
+  fileSystems."/nix/store" = {
+    device = "/dev/disk/by-uuid/408ec677-58a1-49be-8df1-62879216046a";
+    fsType = "ext4";
+  };
 
-  swapDevices =
-    [ { device = "/dev/disk/by-uuid/c3fac7a9-91b2-425c-8a4e-a8e951dd4a06"; }
-    ];
+  swapDevices = [
+    { device = "/dev/disk/by-uuid/c3fac7a9-91b2-425c-8a4e-a8e951dd4a06"; }
+  ];
 
   # Enable CUPS to print documents.
   services.printing = {
@@ -60,4 +62,3 @@
   };
 
 }
-

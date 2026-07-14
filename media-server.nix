@@ -14,7 +14,10 @@
     accelerationDevices = [ "/dev/dri/renderD128" ];
   };
   users.users.immich.isNormalUser = true;
-  users.users.immich.extraGroups = [ "video" "render" ];
+  users.users.immich.extraGroups = [
+    "video"
+    "render"
+  ];
 
   # Music
   services.navidrome.enable = true;

@@ -1,4 +1,9 @@
-{ config, pkgs, lib, ... }:
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}:
 
 {
   virtualisation.hypervGuest.enable = true;
@@ -41,7 +46,7 @@
   ];
 
   ## gVisor tap vsock forwarder setup
-  boot.kernelModules = [ "hv_sock" ];  # TODO: toujours utile ?
+  boot.kernelModules = [ "hv_sock" ]; # TODO: toujours utile ?
   systemd.services.gvforwarder = {
     description = "gvisor-tap-vsock-forwarder: Forward traffic from tap interface over vsock";
     unitConfig.ConditionVirtualization = "microsoft";

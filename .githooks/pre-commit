@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+mapfile -t files < <(git diff --cached --name-only --diff-filter=ACMR -- '*.nix')
+[ ${#files[@]} -eq 0 ] && exit 0
+
+if ! command -v nixfmt >/dev/null 2>&1; then
+  echo "pre-commit: nixfmt not found in PATH (rebuild the system after adding it to system-packages.nix)" >&2
+  exit 1
+fi
+
+nixfmt "${files[@]}"
+git add "${files[@]}"

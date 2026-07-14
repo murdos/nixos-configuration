@@ -1,4 +1,9 @@
-{ config, pkgs, lib, ... }:
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}:
 
 {
   console = {
@@ -11,7 +16,7 @@
   };
   fonts = {
     enableDefaultPackages = true;
-    packages = with pkgs; [ 
+    packages = with pkgs; [
       fira
       nerd-fonts.hack
       nerd-fonts.jetbrains-mono

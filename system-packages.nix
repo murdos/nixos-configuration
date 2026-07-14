@@ -21,6 +21,7 @@
       gnupg
       file
       nvd
+      nixfmt
       gnumake
       automake
       gcc

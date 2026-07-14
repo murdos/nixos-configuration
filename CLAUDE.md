@@ -22,6 +22,14 @@ nh os switch
 nh os build
 ```
 
+## Formatting
+
+Nix files are formatted with `nixfmt` (the RFC 166 standard formatter, package `nixfmt` in `system-packages.nix`). A versioned pre-commit hook (`.githooks/pre-commit`) auto-formats staged `.nix` files on commit. After cloning this repo, enable it once with:
+
+```bash
+git config core.hooksPath .githooks
+```
+
 ## Architecture
 
 `configuration.nix` is a **symlink** pointing to the active machine file (e.g. `machines/framework-amd-7040.nix`). Switching machines means re-pointing the symlink.
